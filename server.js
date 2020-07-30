@@ -6,6 +6,9 @@ const app = express();
 // Connect Database
 connectDB();
 
+// Init Middleware
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) =>
   res.json({ msg: 'Welcome to the Contact keeper API...' })
 );
@@ -18,5 +21,5 @@ app.use('/api/contacts', require('./routes/contacts'));
 const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, () => {
-  console.log(`Live on PORT ${PORT}`);
+  console.log(`Server is live on PORT ${PORT}`);
 });

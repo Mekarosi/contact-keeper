@@ -10,8 +10,7 @@ const Navbar = ({ title, icon }) => {
   return (
     <div className='navbar bg-success'>
       <h1>
-        <FontAwesomeIcon icon={['fas', 'id-card-alt']} />
-        {title}
+        <FontAwesomeIcon icon={['fas', 'id-card-alt']} /> {title}
       </h1>
     </div>
   );

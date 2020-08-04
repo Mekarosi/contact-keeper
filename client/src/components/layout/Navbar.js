@@ -9,7 +9,7 @@ library.add(faIdCardAlt);
 
 const Navbar = ({ title, icon }) => {
   return (
-    <div className='navbar bg-success'>
+    <div className='navbar bg-primary'>
       <h1>
         <FontAwesomeIcon icon={['fas', 'id-card-alt']} /> {title}
       </h1>

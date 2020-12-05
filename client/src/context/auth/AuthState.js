@@ -12,7 +12,7 @@ import {
     LOGIN_FAIL,
     LOGOUT,
     CLEAR_ERRORS,
-    CLEAR_CURRENT
+    // CLEAR_CURRENT
 } from '../types';
 import setAuthToken from '../../utils/setAuthToken';
 

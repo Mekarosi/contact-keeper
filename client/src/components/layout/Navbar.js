@@ -2,6 +2,7 @@ import React, {  Fragment, useContext} from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext'
+import ContactContext from '../../context/contact/contactContext'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIdCardAlt } from '@fortawesome/free-solid-svg-icons';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
@@ -12,11 +13,14 @@ library.add(faSignOutAlt);
 
 const Navbar = ({ title, icon }) => {
   const authContext = useContext(AuthContext)
+  const contactContext = useContext(ContactContext)
 
   const { isAuthenticated, logout, user } = authContext
+  const { clearContacts } = contactContext
 
   const onLogout = () => {
     logout()
+    clearContacts()
   }
   const authLinks = (
     <Fragment>
